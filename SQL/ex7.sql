@@ -17,7 +17,7 @@ JOIN Visit v ON p.Patient_ID = v.Patient_ID;
 -- Query View 1
 SELECT * FROM PatientVisitSummary LIMIT 10;
 
--- Attempt Modification (Should Fail)
+-- Attempt Modification (Should Fail) is in the Document
 INSERT INTO PatientVisitSummary (
     Patient_ID, Patient_Name, Birthdate, Visit_ID, Visit_Date, Department, Visit_Type
 ) VALUES (
@@ -47,7 +47,7 @@ WHERE pr.Stop_Date IS NULL
 -- Query View 2
 SELECT * FROM ActivePrescriptionOverview LIMIT 10;
 
--- Attempt Modification (Should Fail)
+-- Attempt Modification (Should Fail) is in the Document
 UPDATE ActivePrescriptionOverview
 SET Medication_Name = 'TestDrug'
 WHERE Prescription_ID = 1;
